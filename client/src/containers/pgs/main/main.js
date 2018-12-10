@@ -1,4 +1,5 @@
 import * as React from "react";
+import { LakeCoco } from "../../../assets";
 import { Layout } from "../../../containers";
 import { API } from "../../../utils";
 
@@ -170,7 +171,9 @@ class Main extends React.Component {
     
     return (
       <Layout>
+        <LakeCoco />
         <div className='container main-pg margin-top'>
+        
           <input id='input_add-new-todo' onChange={this.changeHandler} type='text' name='action' />          
           <button onClick={this.dataHandler}>SEND DATA</button>
           <div className='flex margin-top'>
