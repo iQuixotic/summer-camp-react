@@ -3,12 +3,12 @@ import { LakeCocoImg } from '../../index';
 
 import './style.css';
 
-const LakeCoco = (props) => {
+const LakeCocoPic = (props) => {
     return ( 
             <div className='lake-coco' id={props.id} >
-                <img src={LakeCocoImg} />
+                <img src={LakeCocoImg} alt='#' />
             </div>
     );
 }
 
-export default LakeCoco;
+export default LakeCocoPic;

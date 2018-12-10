@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './master/normalize.css';
+import 'materialize-css';
+import 'materialize-css/dist/css/materialize.min.css';
 import './master/base.css';
 import App from './master/App';
 import * as serviceWorker from './master/serviceWorker';

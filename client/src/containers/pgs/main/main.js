@@ -1,199 +1,97 @@
 import * as React from "react";
-import { LakeCoco } from "../../../assets";
+import { 
+  LakeCocoPic, LakeStarePic, CampfireCirclePic
+} from "../../../assets";
 import { Layout } from "../../../containers";
-import { API } from "../../../utils";
+// import { API } from "../../../utils";
 
 import './style.css';
 
-let all, history, mine;
+// let all, history, mine;
 class Main extends React.Component {
   constructor(props) {
     super(props)
-    this.changeHandler = this.changeHandler.bind(this)
-    this.checkboxChangeHandler = this.checkboxChangeHandler.bind(this)
-    this.historyHandler = this.historyHandler.bind(this)
+    // this.changeHandler = this.changeHandler.bind(this)
     this.state = {
-      action: [],
-               all: [{
-                 id: '',
-                crossed: '',
-                action: ''
-              }],
-              history: [{
-                id: '',
-               crossed: '',
-               action: ''
-             }],
         loading: false
     }
     this.componentWillMount = () => {
-        this.getDBstuff()
-        this.getHistory()
+        // this.getDBstuff()
+        // this.getHistory()
     }
     this.componentDidMount = () => {
       this.setState({ loading: false })
     }
   }
 
-  getHistory = () => {
-    API.getHistory()
-    .then(res => this.setState({ history: res.data.obj }))
-    .then(() => console.log(this.state.history ))
-    .catch(err => { throw err });
-  }
-
-  getDBstuff = () => {
-    API.getAll()
-    .then(res => this.setState({ all: res.data.obj }))
-    .then(() => console.log(this.state.all ))
-    .catch(err => { throw err });
-  }
-  
-    changeHandler = (e) => {
-      this.setState({ [e.target.name]: e.target.value })
-    }
-
-    dataHandler = () => {
-      const data = {
-        action: this.state.action,
-      }
-      this.submitHandler(data)
-    }
-
-   submitHandler = (arg) => {     
-      API.createNewListItem(arg)
-      this.resetInputFields()
-    }
-
-    resetInputFields = () => {
-      const mainInput = document.getElementById('input_add-new-todo');
-      mainInput.value = ''
-      this.resetSt()
-    }
-
-    resetSt = () => {
-      this.setState({
-        action: []
-      })
-      this.getDBstuff();
-    }
-
-    findById = (arg, arg2) => {
-      let returnVal;
-      arg.forEach(elem => {
-        if(elem.id === arg2) {
-          returnVal = elem;
-        } 
-      });
-      return returnVal;
-    }
-  
-    checkboxChangeHandler = (e) => {
-      
-      all = this.state.all;
-      history = this.state.history;
-      let found = (
-        this.findById(all, parseInt(e.target.id)) === undefined ?
-        this.findById(history, parseInt(e.target.id)) : 
-        this.findById(all, parseInt(e.target.id))
-      )
-      // let found2 = this.findById(history, parseInt(e.target.id))
-      mine = found;
-      mine.crossed = !found.crossed;
-      all.forEach(elem => {
-        if(elem.id === found.id) {
-          elem = found;
-        }
-      });
-      this.setState({ all: all })    
-      const data = {
-        crossed: mine.crossed
-      }
-      API.updateOne(data, e.target.id)
-    }
-
-    historyHandler = () => {
-      let data;
-      // let arr =[];
-      this.state.all.forEach(elem => {
-        data = { action: elem.action, id: elem.id }
-        if(elem.crossed) {
-          API.addSelectedToHistory(data)
-          this.deleteListItem(data, true)
-        } 
-      });
-    }
-
-    eraseHistoryHandler = () => {
-      let data;
-      this.state.history.forEach(elem => {
-        data = { action: elem.action, id: elem.id }
-        if(elem.crossed) {
-          this.deleteListItem(data, false)
-        }
-      })
-    }
-
-  deleteListItem = (data, bool) => {
-    if(bool) {
-      API.deleteLI(data)
-      .then(() => this.getDBstuff())
-      .then(() => this.getHistory())
-      .catch(err => { throw err });
-    } else {
-      console.log('NOPEEEE')
-      API.deletItemFromHistory(data)
-        .then(() => this.getDBstuff())
-        .then(() => this.getHistory())
-        .catch(err => { throw err });
-    }
-    
-  }
-
   render() {
-    let myTable = 
-    (arg) => { 
-      return ( 
-    <div>
-    {
-      arg.map(each => (
-        <div key={each.id} className={each.crossed ? 'completed' : ''}>        
-          <p><input type='checkbox' id={each.id}
-          checked={each.crossed ? 'crossed': ''}
-          onChange={this.checkboxChangeHandler}
-          />{each.action}</p>
-        </div>
-      ))
-    }
-    </div>
+    let mySignInForm = ( 
+      <div className="row card my-sign-in-form">
+        <form className="col s12">
+          
+          {/* materialize email input */}
+          <div className="row">
+            <div className="input-field col s12">
+              <input id="email" type="email" className="validate" />
+              <label for="email">Email</label>
+            </div>
+          </div>
+
+          {/* materialize password input */}
+          <div className="row">
+            <div className="input-field col s12">
+              <input id="password" type="password" className="validate" />
+              <label for="password">Password</label>
+            </div>
+          </div>
+
+          {/* materialize buttons */}
+          <div className='row container flex'>
+            <div className='button-spacing'>
+              <a class="waves-effect waves-light btn-small" href='#'>Login</a>
+            </div>
+            <div className='button-spacing'>
+              <a class="waves-effect waves-light btn-small" href='#'>Sign Up</a>
+            </div>
+          </div>
+        </form>
+      </div>
     )
-  }
     
     return (
       <Layout>
-        <LakeCoco />
+        <LakeCocoPic />        
         <div className='container main-pg margin-top'>
-        
-          <input id='input_add-new-todo' onChange={this.changeHandler} type='text' name='action' />          
-          <button onClick={this.dataHandler}>SEND DATA</button>
-          <div className='flex margin-top'>
+          {mySignInForm}          
+          <div className='center'>
+            <h2>Welcome to Camp!!</h2>
 
-            <div className='left-col'>
-            <div className='heading'>Current</div>
-              <div>{myTable(this.state.all)}</div>
+            {/* Picture row 1 starts here */}
+            <div className='row flex'>
+              <div className='half'>
+                <LakeStarePic />
+              </div>
+              <div className='half'>
+                <p></p>
+              </div>
             </div>
-          
-            <div className='right-col'>
-            <div className='heading'>History</div>
-              <div>{myTable(this.state.history)}</div>
+
+            {/* Picture row 2 starts here */}
+            <div className='row flex'>
+              <div className='half'>
+                <p></p>
+              </div>
+              <div className='half'>
+                < CampfireCirclePic />
+              </div>
+            </div>
+
+            {/* Paragraphs block starts here */}
+            <div className='row'>
+
             </div>
           </div>
-          <div className='btn-group flex'>
-            <div className='half-width'><button onClick={this.historyHandler}>DONE</button></div>
-            <div className='half-width'><button onClick={this.eraseHistoryHandler}>GET IT OUTTA HERE</button></div>
-          </div>
-
-      </div>
+        </div>
     </Layout>
     );
   }

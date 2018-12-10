@@ -22,3 +22,8 @@ button {
   border-radius: 7px;
   font-weight: bold;
 }
+
+img {
+  width: 100%;
+  height: 100%;
+}
