@@ -1,0 +1,46 @@
+.container {
+    width: 70%;
+    margin-left: 15%;
+}
+
+.main-pg {
+    font-size: 2rem;
+}
+
+.flex {
+    background: rgb(241, 250, 249);
+    display: flex;
+}
+
+.heading {
+    text-align: center;
+    background: rgb(68, 68, 68);
+    color: white;
+    font-size: 2.5rem;
+}
+/* .btn-group {
+
+} */
+
+.half-width {
+    width: 50%;
+}
+
+.margin-top {
+    margin-top: 30px;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: green;
+}
+
+.left-col {
+    width: 50%;
+    color: blue;
+}
+
+.right-col {
+    width: 50%;
+    color: purple;
+}

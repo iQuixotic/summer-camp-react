@@ -1,0 +1,24 @@
+html { 
+  font-size: 10px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  border-bottom: 1px solid gray;
+  margin: none;
+}
+
+button {
+  color: white;
+  background-color: blue;
+  border: none;
+  border-radius: 7px;
+  font-weight: bold;
+}
