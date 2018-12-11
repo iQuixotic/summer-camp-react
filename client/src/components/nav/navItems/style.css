@@ -14,7 +14,7 @@
 
 .nav-items li:hover {
     cursor: pointer;
-    color: rgb(44, 213, 255);
+    color: rgb(255, 62, 95);
     text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
     font-weight: bolder;
 }
