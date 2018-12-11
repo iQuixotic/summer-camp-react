@@ -6,7 +6,7 @@ import './style.css';
 const LakeStarePic = (props) => {
     return ( 
             <div className='lake-stare' id={props.id} >
-                <img src={LakeStareImg} alt='#' />
+                <img className='card img-size-control' src={LakeStareImg} alt='#' />
             </div>
     );
 }

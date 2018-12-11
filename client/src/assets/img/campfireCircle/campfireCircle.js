@@ -5,9 +5,9 @@ import './style.css';
 
 const CampfireCirclePic = (props) => {
     return ( 
-            <div className='campfire-circle' id={props.id} >
-                <img src={CampfireCircleImg} alt='#' />
-            </div>
+        <div className='campfire-circle' id={props.id} >
+            <img className='card img-size-control' src={CampfireCircleImg} alt='#' />
+        </div>
     );
 }
 

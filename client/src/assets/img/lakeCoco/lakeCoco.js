@@ -5,9 +5,9 @@ import './style.css';
 
 const LakeCocoPic = (props) => {
     return ( 
-            <div className='lake-coco' id={props.id} >
-                <img src={LakeCocoImg} alt='#' />
-            </div>
+        <div className='lake-coco' id={props.id} >
+            <img src={LakeCocoImg} alt='#' />
+        </div>
     );
 }
 

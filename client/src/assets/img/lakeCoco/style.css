@@ -1,4 +1,6 @@
 .lake-coco {
+    position: relative;
+    bottom: 65px;
     width: 100%;
 }
 

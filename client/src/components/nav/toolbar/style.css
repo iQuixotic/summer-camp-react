@@ -1,4 +1,13 @@
 .toolbar {
+  background-color: transparent;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 2;
   font-size: 2rem;
-  border-bottom: 1px solid rgb(0, 255, 64);
+  color: white;
+}
+
+.toolbar-shadow {
+  box-shadow: 0px 3px 90px 25px black;
 }

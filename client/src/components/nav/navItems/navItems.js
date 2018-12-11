@@ -4,11 +4,12 @@ import './style.css';
 
 const NavItems = (props) => {
     return (
-        <nav className='nav-items'>
-        Todo List
-             {/* <li>To Do<a href={props.link1}>{props.children}</a></li>
-             <li>History<a href={props.link2}>{props.children}</a></li> */}
-        </nav>
+        <ul className='nav-items'>
+             <li>Home<a href={props.link1}>{props.children}</a></li>
+             <li>Activities<a href={props.link2}>{props.children}</a></li>
+             <li>Calender<a href={props.link2}>{props.children}</a></li>
+             <li>Contact<a href={props.link2}>{props.children}</a></li>
+        </ul>
     );
 }
 

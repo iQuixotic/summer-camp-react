@@ -6,11 +6,13 @@ import './style.css';
 const Toolbar = (props) => {
     return (
         <nav className='toolbar'>
-            <ul>
-                <NavItems
-                    link1='home'
-                    link2='history' />
-            </ul>
+        <div className='toolbar-shadow'></div>
+            <NavItems
+                link1='home'
+                link2='calendar' 
+                link3='activities'
+                link4='contact'
+                />
         </nav>
     );
 }
