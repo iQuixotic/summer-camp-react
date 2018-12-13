@@ -5,11 +5,14 @@ export { default as Loader } from './hoc/loader/spinWheel';
 export { default as Layout } from './resp/layout';
 export { default as MQ } from './resp/mediaQuery';
 
-// export * from partials 
+// export * from carousel
+export { default as Carousel } from './carousel/carousel';
 
 // export * from pgs
 export { default as Main } from './pgs/main/main';
 export { default as ActivitiesPage } from './pgs/activities/activities';
 export { default as CalendarPage } from './pgs/calendar/calendar';
 export { default as ContactPage } from './pgs/contact/contact';
+
+
 

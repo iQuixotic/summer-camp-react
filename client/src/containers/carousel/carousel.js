@@ -1,20 +1,24 @@
 import * as React from "react";
 import { 
     LakeCocoPic
-  } from "../../../assets";
-// import { Layout } from "../../../containers";
+  } from "../../assets";
+import { Layout } from "../../containers";
 import './style.css';
 
 class Carousel extends React.Component {
     state = {
-       loading: true
+       loading: true,
+       thing: false
     }
 
   render() {
     return (
-      <div className='carousel'>
+        <Layout {...this.state}>
+<div className='carousel'>
         <LakeCocoPic />
       </div>
+        </Layout>
+      
     );
   }
 }

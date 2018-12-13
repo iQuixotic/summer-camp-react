@@ -2,7 +2,7 @@ import * as React from "react";
 import { 
   LakeCocoPic, LakeStarePic, CampfireCirclePic
 } from "../../../assets";
-import { Layout } from "../../../containers";
+import { Layout, Carousel } from "../../../containers";
 // import { API } from "../../../utils";
 
 import './style.css';
@@ -13,18 +13,17 @@ class Main extends React.Component {
     super(props)
     // this.changeHandler = this.changeHandler.bind(this)
     this.state = {
-        loading: false, 
-        carousel: <LakeCocoPic />
-    }
-    this.componentWillMount = () => {
-      this.setState({ loading: true })
-        // this.getDBstuff()
-        // this.getHistory()
+        loading: true, 
+        carousel: <Carousel />
     }
     this.componentDidMount = () => {
+      
+      // this.setState({ carousel: <LakeCocoPic /> })
       this.setState({ loading: false })
-    }
+    } 
+    
   }
+  
 
   render() {
     let mySignInForm = ( 
