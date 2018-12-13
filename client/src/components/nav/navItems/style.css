@@ -2,8 +2,18 @@
     width: 80%;
     margin-left: 10%;
     text-align: center;
-    font-size: 2.5rem;
     box-shadow: none;
+}
+
+.nav-items a {
+    font-size: 2.5rem;
+}
+
+.nav-items a:hover {
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
+    background-color: transparent;
+    cursor: pointer;
+    color: rgb(255, 62, 95);
 }
 
 .nav-items li {
@@ -13,8 +23,5 @@
 }
 
 .nav-items li:hover {
-    cursor: pointer;
-    color: rgb(255, 62, 95);
-    text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
-    font-weight: bolder;
+    border-radius: 50px;
 }

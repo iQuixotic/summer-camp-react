@@ -23,9 +23,19 @@ button {
   font-weight: bold;
 }
 
+.input-field input:focus {
+  border-bottom: 1px solid black !important;
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.4) !important;
+}
+
 .btn-small {
   background-color: rgb(255, 62, 95);
 }
+
+.btn-small:visited {
+  background-color: rgb(255, 62, 95);
+}
+
 
 label.active {
   color:  black !important;

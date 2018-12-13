@@ -2,7 +2,7 @@ import * as React from "react";
 import { 
   LakeCocoPic, LakeStarePic, CampfireCirclePic
 } from "../../../assets";
-import { Layout } from "../../../containers";
+import { Layout, ActivitiesPage } from "../../../containers";
 // import { API } from "../../../utils";
 
 import './style.css';
@@ -99,10 +99,10 @@ class Main extends React.Component {
             </div>
           </div>
         </div>
+        <ActivitiesPage />
     </Layout>
     );
   }
 }
-
 
 export default Main;

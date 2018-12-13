@@ -9,4 +9,4 @@ export { default as MQ } from './resp/mediaQuery';
 
 // export * from pgs
 export { default as Main } from './pgs/main/main';
-export { default as ExCon } from './pgs/main/main';
+export { default as ActivitiesPage } from './pgs/activities/activities';

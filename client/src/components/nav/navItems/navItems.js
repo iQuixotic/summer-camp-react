@@ -5,10 +5,10 @@ import './style.css';
 const NavItems = (props) => {
     return (
         <ul className='nav-items'>
-             <li>Home<a href={props.link1}>{props.children}</a></li>
-             <li>Activities<a href={props.link2}>{props.children}</a></li>
-             <li>Calender<a href={props.link2}>{props.children}</a></li>
-             <li>Contact<a href={props.link2}>{props.children}</a></li>
+             <li><a className={props.className1} href={props.link2}>Home</a></li>
+             <li><a className={props.className2} href={props.link3}>Activities</a></li>
+             <li><a className={props.className3} href={props.link1}>Calendar</a></li>
+             <li><a className={props.className4} href={props.link4}>Contact</a></li>
         </ul>
     );
 }
