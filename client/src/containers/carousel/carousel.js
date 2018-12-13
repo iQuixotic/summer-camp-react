@@ -2,22 +2,28 @@ import * as React from "react";
 import { 
     LakeCocoPic
   } from "../../assets";
-import { Layout } from "../../containers";
+import { Layout, Loader } from "../../containers";
 import './style.css';
+import StupidLayout from "../resp/stupidLayout";
 
 class Carousel extends React.Component {
     state = {
        loading: true,
        thing: false
     }
+    // componentDidMount = () => {
+    //     setTimeout(() => {
+    //         this.setState({loading: false})
+    //     }, 2000);
+    // }
 
   render() {
     return (
-        <Layout {...this.state}>
-<div className='carousel'>
-        <LakeCocoPic />
-      </div>
-        </Layout>
+        <StupidLayout >
+            <div className='carousel'>
+                <LakeCocoPic />
+            </div>
+        </StupidLayout >
       
     );
   }

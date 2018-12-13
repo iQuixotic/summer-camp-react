@@ -18,8 +18,9 @@ class Main extends React.Component {
     }
     this.componentDidMount = () => {
       
-      // this.setState({ carousel: <LakeCocoPic /> })
-      this.setState({ loading: false })
+      setTimeout(() => {
+        this.setState({loading: false})
+    }, 1500);
     } 
     
   }
