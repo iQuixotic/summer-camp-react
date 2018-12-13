@@ -8,10 +8,10 @@ const Toolbar = (props) => {
         <nav className='toolbar'>
         <div className='toolbar-shadow'></div>
             <NavItems
-                link1='home'
-                link2='calendar' 
-                link3='activities'
-                link4='contact'
+                link1='/'
+                link2='/activities'
+                link3='/calendar' 
+                link4='/contact'
                 />
         </nav>
     );
