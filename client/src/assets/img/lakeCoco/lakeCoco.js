@@ -1,5 +1,6 @@
 import * as React from "react";
 import { LakeCocoImg } from '../../index';
+import { Loader } from '../../../containers';
 
 import './style.css';
 
@@ -11,4 +12,4 @@ const LakeCocoPic = (props) => {
     );
 }
 
-export default LakeCocoPic;
+export default Loader(LakeCocoPic);

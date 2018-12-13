@@ -2,7 +2,7 @@ import * as React from "react";
 import { 
   LakeCocoPic, LakeStarePic, CampfireCirclePic
 } from "../../../assets";
-import { Layout, ActivitiesPage } from "../../../containers";
+import { Layout } from "../../../containers";
 // import { API } from "../../../utils";
 
 import './style.css';
@@ -13,9 +13,11 @@ class Main extends React.Component {
     super(props)
     // this.changeHandler = this.changeHandler.bind(this)
     this.state = {
-        loading: false
+        loading: false, 
+        carousel: <LakeCocoPic />
     }
     this.componentWillMount = () => {
+      this.setState({ loading: true })
         // this.getDBstuff()
         // this.getHistory()
     }
@@ -28,6 +30,10 @@ class Main extends React.Component {
     let mySignInForm = ( 
       <div className="row card my-sign-in-form">
         <form className="col s12">
+
+          <div className="row">
+            <h3>Login</h3>
+          </div>
           
           {/* materialize email input */}
           <div className="row">
@@ -59,8 +65,9 @@ class Main extends React.Component {
     )
     
     return (
-      <Layout>
-        <LakeCocoPic />        
+      <Layout {...this.state}>
+        {this.state.carousel}
+        {/* <LakeCocoPic />         */}
         <div className='page-edge main-pg margin-top'>
           <div className='container'>
             {mySignInForm}  
