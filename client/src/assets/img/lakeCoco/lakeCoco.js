@@ -6,9 +6,9 @@ import './style.css';
 
 const LakeCocoPic = (props) => {
     return ( 
-        <div className='lake-coco' id={props.id} >
-            <img onLoad={props.load} src={LakeCocoImg} alt='#' />
-        </div>
+        <a class="carousel-item" href="#one!">
+            <img alt='#' onLoad={props.load} src={LakeCocoImg}/>
+        </a>
     );
 }
 

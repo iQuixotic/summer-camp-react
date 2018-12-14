@@ -9,11 +9,11 @@ import './style.css';
 // });
 const Carousel = (props) => {
     return(
-        <div className="carousel carousel-slider">
-            <a className="carousel-item" href="#one!"><img alt='#' onLoad={props.load} src={LakeCocoImg}/></a>
-            {/* <a className="carousel-item" href="#two!"><img alt='#' src={LakeCocoPic}/></a>
-            <a className="carousel-item" href="#three!"><img alt='#' src={LakeCocoPic}/></a>
-            <a className="carousel-item" href="#four!"><img alt='#' src={LakeCocoPic}/></a> */}
+        <div class="carousel carousel-slider">
+            <a class="carousel-item" href="#one!"><img alt='#' onLoad={props.load} src={LakeCocoImg}/></a>
+            <a class="carousel-item" href="#two!"><img alt='#' src={LakeCocoImg}/></a>
+            <a class="carousel-item" href="#three!"><img alt='#' src={LakeCocoImg}/></a>
+            <a class="carousel-item" href="#four!"><img alt='#' src={LakeCocoImg}/></a>
         </div>
     );
 }

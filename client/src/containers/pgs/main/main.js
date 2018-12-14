@@ -1,11 +1,17 @@
 import * as React from "react";
 import { 
-  LakeStarePic, CampfireCirclePic
+  LakeStarePic, CampfireCirclePic, LakeCocoImg, JumpingInLakeImg, CanoesImg, CabinsImg
 } from "../../../assets";
+import  M from 'materialize-css';
 import { Carousel } from "../../../components";
 import { Layout } from "../../../containers";
 // import { API } from "../../../utils";
 import './style.css';
+
+// materialize carousel
+// var instance = M.Carousel.init({
+//   fullWidth: true
+// });
 
 class Main extends React.Component {
   constructor(props) {
@@ -13,6 +19,11 @@ class Main extends React.Component {
     this.state = {
         loading: true, 
         imagesLoaded: false
+    }
+    this.componentWillMount = () => {
+      M.Carousel.init({
+        fullWidth: true
+      });
     }
     this.componentDidMount = () => {
       this.setState({ imagesLoaded: false, loading: true })
@@ -69,9 +80,17 @@ class Main extends React.Component {
     
     return (
       <Layout {...this.state}>
-        <Carousel 
+        {/* <Carousel 
         load={this.imageLoadedHandler}
-        />
+        /> */}
+        
+        <div className="carousel carousel-slider">
+        {/* <img className="carousel-item" alt='#' onLoad={this.imageLoadedHandler} src={LakeCocoImg}/> */}
+            <a className="carousel-item" href="#one!"><img alt='#' onLoad={this.imageLoadedHandler} src={LakeCocoImg}/></a>
+            <a className="carousel-item" href="#two!"><img alt='#' src={CabinsImg}/></a>
+            <a className="carousel-item" href="#three!"><img alt='#' src={CanoesImg}/></a>
+            <a className="carousel-item" href="#four!"><img alt='#' src={JumpingInLakeImg}/></a>
+        </div>
         <div className='page-edge main-pg margin-top'>
           <div className='container'>
             {mySignInForm}  
