@@ -2,54 +2,22 @@ import * as React from "react";
 import { 
   LakeStarePic, CampfireCirclePic
 } from "../../../assets";
-import { Layout, Carousel } from "../../../containers";
+import { Carousel } from "../../../components";
+import { Layout } from "../../../containers";
 // import { API } from "../../../utils";
-
 import './style.css';
 
-// let all, history, mine;
 class Main extends React.Component {
   constructor(props) {
     super(props)
-    // this.changeHandler = this.changeHandler.bind(this)
     this.state = {
         loading: true, 
         imagesLoaded: false
     }
     this.componentDidMount = () => {
       this.setState({ imagesLoaded: false, loading: true })
-
-     this.wait1Second()
     } 
   }
-
-    checkImageLoaded = () => {
-      console.log('check image loaded')
-      // if(this.state.imagesLoaded) {
-      //   this.setImagesLoadingFalse()
-      //   console.log('there')
-
-      // } else {
-      //   this.wait1Second();
-      // }
-    }
-
-    wait1Second = () => {
-      console.log('wait one second')
-
-      // setTimeout(() => {
-      //   if(this.state.imagesLoaded) {
-      //     console.log('here')
-      //     this.setImagesLoadingFalse();
-      //   } else {
-      //     this.checkImageLoaded();
-      //   }
-      // }, 1000);
-    }
-
-    // setImagesLoadingFalse = () => {
-    //   this.setState({loading: false})
-    // }
 
     imageLoadedHandler = () => {
       this.setState({ imagesLoaded: true, loading: false })
@@ -61,13 +29,11 @@ class Main extends React.Component {
   getMyState = () => {
     console.log(this.state)
   }
-  
 
   render() {
     let mySignInForm = ( 
       <div className="row card my-sign-in-form">
         <form className="col s12">
-
           <div className="row">
             <h3>Login</h3>
           </div>

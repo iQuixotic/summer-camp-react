@@ -15,3 +15,6 @@ export { default as NavItems } from './nav/navItems/navItems';
 
 // export backdrop
 export { default as Backdrop } from './backdrop/backdrop';
+
+// export * from carousel
+export { default as Carousel } from './carousel/carousel';

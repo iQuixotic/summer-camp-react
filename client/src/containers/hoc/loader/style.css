@@ -13,8 +13,10 @@
 }
 
 #first {
-  left: 45%;
-  top: 45%;  
+  top: 0;
+  left: 0;
+  /* left: 45%;
+  top: 45%;   */
   position: absolute;
   background-color: black;
   z-index: 9001;
@@ -23,16 +25,18 @@
 }
 
 .Loader {
-  /* position: relative; */
+  position: absolute;
+  top: 45%;
+  left: 45%;
   color: rgb(92, 151, 180);  
   font-size: 20px;
   font-weight: 500;  
   line-height: 100%;
-    width: 5%;
-    height: 9rem;
-    vertical-align: middle;
-    text-align: center;
-    align-items: center;
+  width: 5%;
+  height: 9rem;
+  vertical-align: middle;
+  text-align: center;
+  align-items: center;
   }
 
   .Loader div {
