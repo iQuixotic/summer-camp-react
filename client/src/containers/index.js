@@ -8,6 +8,8 @@ export { default as MQ } from './resp/mediaQuery';
 
 // export * from carousel
 export { default as Carousel } from './carousel/carousel';
+export { default as Img } from './carousel/img';
+
 
 // export * from pgs
 export { default as Main } from './pgs/main/main';

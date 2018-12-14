@@ -1,6 +1,6 @@
 import * as React from "react";
 import { 
-  LakeCocoPic, LakeStarePic, CampfireCirclePic
+  LakeStarePic, CampfireCirclePic
 } from "../../../assets";
 import { Layout, Carousel } from "../../../containers";
 // import { API } from "../../../utils";
@@ -18,9 +18,9 @@ class Main extends React.Component {
     }
     this.componentDidMount = () => {
       
-      setTimeout(() => {
+    //   setTimeout(() => {
         this.setState({loading: false})
-    }, 1500);
+    // }, 2000);
     } 
     
   }
@@ -39,7 +39,7 @@ class Main extends React.Component {
           <div className="row">
             <div className="input-field col s12">
               <input id="email" type="email" className="validate" />
-              <label for="email">Email</label>
+              <label htmlFor="email">Email</label>
             </div>
           </div>
 
@@ -47,17 +47,17 @@ class Main extends React.Component {
           <div className="row">
             <div className="input-field col s12">
               <input id="password" type="password" className="validate" />
-              <label for="password">Password</label>
+              <label htmlFor="password">Password</label>
             </div>
           </div>
 
           {/* materialize buttons */}
           <div className='row container flex'>
             <div className='button-spacing'>
-              <a class="waves-effect waves-light btn-small" href='#'>Login</a>
+              <a className="waves-effect waves-light btn-small" href='/'>Login</a>
             </div>
             <div className='button-spacing'>
-              <a class="waves-effect waves-light btn-small" href='#'>Sign Up</a>
+              <a className="waves-effect waves-light btn-small" href='/'>Sign Up</a>
             </div>
           </div>
         </form>
@@ -66,7 +66,7 @@ class Main extends React.Component {
     
     return (
       <Layout {...this.state}>
-        {this.state.carousel}
+        <Carousel />
         {/* <LakeCocoPic />         */}
         <div className='page-edge main-pg margin-top'>
           <div className='container'>
