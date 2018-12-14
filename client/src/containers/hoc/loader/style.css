@@ -1,9 +1,25 @@
-#first {
+.hidden {
+  display: none;
+  position: fixed;
+  z-index: 1;
+}
+
+.cover-the-screen {
   position: absolute;
+  background-color: black;
+  z-index: 9001;
   width: 100%;
   height: 100%;
+}
+
+#first {
   left: 45%;
-  top: 45%;
+  top: 45%;  
+  position: absolute;
+  background-color: black;
+  z-index: 9001;
+  width: 100%;
+  height: 100%;
 }
 
 .Loader {

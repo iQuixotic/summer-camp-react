@@ -19,7 +19,9 @@ class Carousel extends React.Component {
     return (
         // <StupidLayout  {...this.state}>
             <div className='carousel'>
-                <LakeCocoPic />
+                <LakeCocoPic 
+                load={this.props.load}
+                />
             </div>
         // </StupidLayout >
       

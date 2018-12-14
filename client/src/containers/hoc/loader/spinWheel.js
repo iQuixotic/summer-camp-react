@@ -17,8 +17,13 @@ const Loader = (WrappedComponent) => {
 
         render() {
             return (
-                this.state.loading ?
-                <div id='first'><div className="Loader">loading...<div /><div /><div /><div /><div /><div /><div /><div /></div></div> :
+                this.state.loading ? 
+                (
+                    <div>
+                <WrappedComponent  className='hidden' {...this.state} {...this.props} />
+                <div className='cover-the-screen'><div id='first'><div className="Loader">
+                    loading...
+                <div /><div /><div /><div /><div /><div /><div /><div /></div></div></div></div>) :
                 <WrappedComponent  {...this.state} {...this.props} />
 
             )

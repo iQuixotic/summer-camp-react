@@ -14,15 +14,52 @@ class Main extends React.Component {
     // this.changeHandler = this.changeHandler.bind(this)
     this.state = {
         loading: true, 
-        carousel: <Carousel />
+        imagesLoaded: false
     }
     this.componentDidMount = () => {
-      
-    //   setTimeout(() => {
-        this.setState({loading: false})
-    // }, 2000);
+      this.setState({ imagesLoaded: false, loading: true })
+
+     this.wait1Second()
     } 
+  }
+
+    checkImageLoaded = () => {
+      console.log('check image loaded')
+      // if(this.state.imagesLoaded) {
+      //   this.setImagesLoadingFalse()
+      //   console.log('there')
+
+      // } else {
+      //   this.wait1Second();
+      // }
+    }
+
+    wait1Second = () => {
+      console.log('wait one second')
+
+      // setTimeout(() => {
+      //   if(this.state.imagesLoaded) {
+      //     console.log('here')
+      //     this.setImagesLoadingFalse();
+      //   } else {
+      //     this.checkImageLoaded();
+      //   }
+      // }, 1000);
+    }
+
+    // setImagesLoadingFalse = () => {
+    //   this.setState({loading: false})
+    // }
+
+    imageLoadedHandler = () => {
+      this.setState({ imagesLoaded: true, loading: false })
+      console.log('image loaded')
+      console.log(this.state)
+
+    }
     
+  getMyState = () => {
+    console.log(this.state)
   }
   
 
@@ -66,13 +103,15 @@ class Main extends React.Component {
     
     return (
       <Layout {...this.state}>
-        <Carousel />
-        {/* <LakeCocoPic />         */}
+        <Carousel 
+        load={this.imageLoadedHandler}
+        />
         <div className='page-edge main-pg margin-top'>
           <div className='container'>
             {mySignInForm}  
           </div>                  
           <div className='center'>
+          <button onClick={this.getMyState}>getMyState Button</button>
             <h2>Welcome to Camp!!</h2>
 
             {/* Picture row 1 starts here */}

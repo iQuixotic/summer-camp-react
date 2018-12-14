@@ -5,16 +5,19 @@ class Img extends React.Component {
     
   constructor(props) {
     super(props);
-    this.handleImageLoaded = this.handleImageLoaded.bind(this);
-    this.state = { loading: false };
+    // this.handleImageLoaded = this.handleImageLoaded.bind(this);
+    this.state = { loading: true };
   }
 
-  componentWillMount = () => {
-      this.setState({ loading: true })
-  }
+//   componentWillMount = () => {
+//       this.setState({ loading: true })
+//   }
 
-  handleImageLoaded(e) {
-      console.log(e)
+//     componentDidUpdate = () => {
+//       this.setState({ loading: false })
+//   }
+  handleImageLoaded = () => {
+      console.log('')
       console.log('hello shit')
       console.log(this.state)
     this.setState({ loading: false });
@@ -26,10 +29,10 @@ class Img extends React.Component {
       <StupidLayout {...this.state}>
         <img
           src={this.props.src}
-          onLoad={this.handleImageLoaded}
+          onLoad={this.handleImageLoaded.bind(this)}
+          onError={() => console.log('huh')}
           alt='#'
         />
-        {/* <h1>{this.state.loading}</h1> */}
       </StupidLayout>
     );
   }

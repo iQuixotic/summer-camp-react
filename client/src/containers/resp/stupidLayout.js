@@ -10,9 +10,9 @@ class StupidLayout extends Component {
 
   render() {
     return (
-            <div className='Layout'>
-                {this.props.children}
-              </div>    
+        <div className='Layout'>
+            {this.props.children}
+        </div>    
     );
   }
 }
