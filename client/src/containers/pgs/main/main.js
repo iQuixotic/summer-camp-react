@@ -1,8 +1,8 @@
 import * as React from "react";
 import { 
-  LakeStarePic, CampfireCirclePic, LakeCocoImg, JumpingInLakeImg, CanoesImg, CabinsImg
+  LakeStarePic, CampfireCirclePic
 } from "../../../assets";
-import  M from 'materialize-css';
+// import  M from 'materialize-css';
 // import { Carousel } from "../../../components";
 import { Layout, Carousel } from "../../../containers";
 // import { API } from "../../../utils";
