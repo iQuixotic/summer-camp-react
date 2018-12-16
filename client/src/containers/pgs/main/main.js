@@ -8,10 +8,20 @@ import { Layout } from "../../../containers";
 // import { API } from "../../../utils";
 import './style.css';
 
-// materialize carousel
+// // materialize carousel
 // var instance = M.Carousel.init({
 //   fullWidth: true
 // });
+document.addEventListener('DOMContentLoaded', function() {
+  let elems = document.querySelectorAll('.carousel');
+  let options = { 'fullWidth': true, 'indicators': true, 'duration': 100 }
+  let instances = M.Carousel.init(elems, options);
+  // let instance = M.Carousel.getInstance(elem);
+  console.log(instances[0])
+  instances[0].set(1);
+  // instances[0].next();
+  // this.autoplay()
+})
 
 class Main extends React.Component {
   constructor(props) {
@@ -20,14 +30,21 @@ class Main extends React.Component {
         loading: true, 
         imagesLoaded: false
     }
-    this.componentWillMount = () => {
-      M.Carousel.init({
-        fullWidth: true
-      });
-    }
+    // this.componentWillMount = () => {
+    //   let instances = M.Carousel.init({
+    //     fullWidth: true
+    //   });
+    // }
     this.componentDidMount = () => {
       this.setState({ imagesLoaded: false, loading: true })
+      this.autoplay()
     } 
+  }
+
+  autoplay = () => {
+    // M.Carousel('next');
+    // instances[0].next();
+
   }
 
     imageLoadedHandler = () => {
