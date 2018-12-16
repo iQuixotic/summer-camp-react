@@ -57,11 +57,11 @@
         fullWidth: true,
         indicators: true
       });
-      autoplay();
+      setTimeout(autoplay, 10000);
       function autoplay() {
         $('.carousel').carousel('next');
         console.log('i did it')
-        setTimeout(autoplay, 6000)
+        setTimeout(autoplay, 10000)
       }
     });  
     

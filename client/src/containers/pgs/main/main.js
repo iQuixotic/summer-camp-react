@@ -5,26 +5,8 @@ import {
 // import  M from 'materialize-css';
 // import { Carousel } from "../../../components";
 import { Layout, Carousel } from "../../../containers";
-// import { API } from "../../../utils";
 import './style.css';
 
-// // materialize carousel
-// var instance = M.Carousel.init({
-//   fullWidth: true
-// });
-// document.addEventListener('DOMContentLoaded', function() {
-//   let elems = document.querySelectorAll('.carousel');
-  // let options = { 'fullWidth': true, 'indicators': true, 'duration': 100 }
-  // let instances = M.Carousel.init(elems, options);
-  // var instance = M.Carousel.getInstance(el);
-  // var instance = M.Carousel.init(elems, {
-  //   fullWidth: true
-  // });
-  // console.log(instance[0])
-  // instance[0].set(1);
-  // instance[0].next();
-
-// })
 
 class Main extends React.Component {
   constructor(props) {
@@ -32,20 +14,11 @@ class Main extends React.Component {
     this.state = {
         loading: true, 
         imagesLoaded: false,
-        // imageShowing: picArr
     }
     this.componentDidMount = () => {
       this.setState({ imagesLoaded: false, loading: true })
-      // this.autoplay()
-      // setInterval(this.autoplay(), 4500);
     } 
   }
-
-  // autoplay = () => {
-  //   let carous = M.Carousel.init('.carousel')
-  //   elems('next');
-  // }
-
     imageLoadedHandler = () => {
       this.setState({ imagesLoaded: true, loading: false })
       console.log('image loaded')
