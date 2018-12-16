@@ -1,12 +1,9 @@
 import React from "react";
+import { Link  }from 'react-router-dom';
 import {
     LakeCocoImg, CabinsImg, CanoesImg, JumpingInLakeImg
 } from "../../assets";
 import './style.css';
-
-// var instance = M.Carousel.init({
-//     fullWidth: true
-// });
 
 
 let picArr = [{img: LakeCocoImg}, {img: CabinsImg}, {img: CanoesImg}, {img: JumpingInLakeImg}]
@@ -18,11 +15,11 @@ class Carousel extends React.Component {
     }
     render() {
         return(
-            <div class="carousel carousel-slider">
-                <a class="carousel-item" href="#one!"><img alt='#' onLoad={this.props.load} src={LakeCocoImg}/></a>
-                <a class="carousel-item" href="#two!"><img alt='#' src={LakeCocoImg}/></a>
-                <a class="carousel-item" href="#three!"><img alt='#' src={LakeCocoImg}/></a>
-                <a class="carousel-item" href="#four!"><img alt='#' src={LakeCocoImg}/></a>
+            <div className="carousel carousel-slider">
+                <Link className="carousel-item" to="#one!"><img alt='#' onLoad={this.props.load} src={LakeCocoImg}/></Link>
+                <Link className="carousel-item" to="#two!"><img alt='#' src={CabinsImg}/></Link>
+                <Link className="carousel-item" to="#three!"><img alt='#' src={CanoesImg}/></Link>
+                <Link className="carousel-item" to="#four!"><img alt='#' src={JumpingInLakeImg}/></Link>
             </div>
         );
     }

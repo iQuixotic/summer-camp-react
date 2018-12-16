@@ -99,12 +99,6 @@ class Main extends React.Component {
         load={this.imageLoadedHandler}
         />
         
-        {/* <div className="carousel carousel-slider">
-            <a className="carousel-item" href="#one!"><img alt='#' onLoad={this.imageLoadedHandler} src={this.state.imageShowing[0]}/></a>
-            <a className="carousel-item" href="#two!"><img alt='#' src={CabinsImg}/></a>
-            <a className="carousel-item" href="#three!"><img alt='#' src={CanoesImg}/></a>
-            <a className="carousel-item" href="#four!"><img alt='#' src={JumpingInLakeImg}/></a>
-        </div> */}
         <div className='page-edge main-pg margin-top'>
           <div className='container'>
             {mySignInForm}  
