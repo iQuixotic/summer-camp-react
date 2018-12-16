@@ -13,5 +13,7 @@ export { default as ActivitiesPage } from './pgs/activities/activities';
 export { default as CalendarPage } from './pgs/calendar/calendar';
 export { default as ContactPage } from './pgs/contact/contact';
 
+// export carousel
+export { default as Carousel } from './carousel/carousel';
 
 

@@ -21,6 +21,7 @@
     "materialize-css": "^1.0.0-rc.2",
     "morgan": "^1.9.1",
     "mysql": "^2.16.0",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "react-materialize": "^2.6.0"
   }
 }

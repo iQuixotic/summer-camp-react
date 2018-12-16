@@ -3,8 +3,8 @@ import {
   LakeStarePic, CampfireCirclePic, LakeCocoImg, JumpingInLakeImg, CanoesImg, CabinsImg
 } from "../../../assets";
 import  M from 'materialize-css';
-import { Carousel } from "../../../components";
-import { Layout } from "../../../containers";
+// import { Carousel } from "../../../components";
+import { Layout, Carousel } from "../../../containers";
 // import { API } from "../../../utils";
 import './style.css';
 
@@ -12,46 +12,44 @@ import './style.css';
 // var instance = M.Carousel.init({
 //   fullWidth: true
 // });
-document.addEventListener('DOMContentLoaded', function() {
-  let elems = document.querySelectorAll('.carousel');
-  let options = { 'fullWidth': true, 'indicators': true, 'duration': 100 }
-  let instances = M.Carousel.init(elems, options);
-  // let instance = M.Carousel.getInstance(elem);
-  console.log(instances[0])
-  instances[0].set(1);
-  // instances[0].next();
-  // this.autoplay()
-})
+// document.addEventListener('DOMContentLoaded', function() {
+//   let elems = document.querySelectorAll('.carousel');
+  // let options = { 'fullWidth': true, 'indicators': true, 'duration': 100 }
+  // let instances = M.Carousel.init(elems, options);
+  // var instance = M.Carousel.getInstance(el);
+  // var instance = M.Carousel.init(elems, {
+  //   fullWidth: true
+  // });
+  // console.log(instance[0])
+  // instance[0].set(1);
+  // instance[0].next();
+
+// })
 
 class Main extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
         loading: true, 
-        imagesLoaded: false
+        imagesLoaded: false,
+        // imageShowing: picArr
     }
-    // this.componentWillMount = () => {
-    //   let instances = M.Carousel.init({
-    //     fullWidth: true
-    //   });
-    // }
     this.componentDidMount = () => {
       this.setState({ imagesLoaded: false, loading: true })
-      this.autoplay()
+      // this.autoplay()
+      // setInterval(this.autoplay(), 4500);
     } 
   }
 
-  autoplay = () => {
-    // M.Carousel('next');
-    // instances[0].next();
-
-  }
+  // autoplay = () => {
+  //   let carous = M.Carousel.init('.carousel')
+  //   elems('next');
+  // }
 
     imageLoadedHandler = () => {
       this.setState({ imagesLoaded: true, loading: false })
       console.log('image loaded')
       console.log(this.state)
-
     }
     
   getMyState = () => {
@@ -97,17 +95,16 @@ class Main extends React.Component {
     
     return (
       <Layout {...this.state}>
-        {/* <Carousel 
+        <Carousel 
         load={this.imageLoadedHandler}
-        /> */}
+        />
         
-        <div className="carousel carousel-slider">
-        {/* <img className="carousel-item" alt='#' onLoad={this.imageLoadedHandler} src={LakeCocoImg}/> */}
-            <a className="carousel-item" href="#one!"><img alt='#' onLoad={this.imageLoadedHandler} src={LakeCocoImg}/></a>
+        {/* <div className="carousel carousel-slider">
+            <a className="carousel-item" href="#one!"><img alt='#' onLoad={this.imageLoadedHandler} src={this.state.imageShowing[0]}/></a>
             <a className="carousel-item" href="#two!"><img alt='#' src={CabinsImg}/></a>
             <a className="carousel-item" href="#three!"><img alt='#' src={CanoesImg}/></a>
             <a className="carousel-item" href="#four!"><img alt='#' src={JumpingInLakeImg}/></a>
-        </div>
+        </div> */}
         <div className='page-edge main-pg margin-top'>
           <div className='container'>
             {mySignInForm}  

@@ -10,3 +10,8 @@
 .my-carousel-item {
     position: unset;
 }
+
+
+.carousel-slider {
+    height: 400px !important;
+}
