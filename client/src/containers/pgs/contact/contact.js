@@ -2,6 +2,7 @@ import * as React from "react";
 import { Layout } from "../../../containers";
 import './style.css';
 
+console.log(window.location.pathname)
 class ContactPage extends React.Component {
     state = {
         headline: 'this is the concact Page'

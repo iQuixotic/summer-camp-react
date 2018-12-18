@@ -5,9 +5,31 @@
   left: 0;
   z-index: 2;
   font-size: 2rem;
-  color: white;
+  /* color: white; */
 }
 
 .toolbar-shadow {
   box-shadow: 0px 3px 90px 25px black;
+}
+
+.alt-tb {
+  background-color: white;
+  border-bottom: 1px solid rgb(170, 170, 170);
+}
+
+.alt-tb .nav-items li a {
+  height: 90px;
+  font-weight: 500;
+  color: rgb(170, 170, 170) !important;
+}
+
+.alt-tb .nav-items li a:hover,
+.alt-tb .nav-items li .active {
+  font-weight: 600;
+  text-shadow: none;
+  color: rgb(51, 51, 51) !important;
+}
+
+.alt-tb.nav-items li {
+  color: red;
 }

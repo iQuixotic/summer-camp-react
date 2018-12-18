@@ -1,11 +1,10 @@
 .my-sign-in-form {
     padding: 20px;
-    padding-top: 30px;
     font-size: 2.5rem;
-    width: 35%;
+    width: 330px;
     position: absolute;
-    bottom: 200px;
-    right: 55%; 
+    bottom: 100px;
+    right: 60%; 
 }
 
 .half {
@@ -33,9 +32,9 @@
 }
 
 .main-page-info {
-    width: 80%;
-    margin-left: 10%;
-    text-align: left;
+    /* width: 100%; */
+    /* margin-left: 10%; */
+    text-align: justify;
 }
 
 .container {
@@ -44,11 +43,12 @@
 }
 
 .main-pg {
+    width: 98%;
+    margin-left: 1%;
     font-size: 2rem;
 }
 
 .flex {
-    /* background: rgb(241, 250, 249); */
     display: flex;
 }
 
@@ -83,4 +83,14 @@
 .right-col {
     width: 50%;
     color: purple;
+}
+
+@media only screen and (max-width: 900px) {
+
+    .my-sign-in-form {
+        font-size: 2.5rem;
+        /* width: 25%; */
+        bottom: 100px;
+        left: 5%; 
+    }
 }
