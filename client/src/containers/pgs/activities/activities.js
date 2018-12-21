@@ -1,4 +1,8 @@
 import * as React from "react";
+
+import { 
+  LakeStarePic, CampfireCirclePic
+} from "../../../assets";
 import { Layout } from "../../../containers";
 
 
@@ -12,7 +16,31 @@ class ActivitiesPage extends React.Component {
   render() {
     return (
       <Layout>
-        Hello
+        
+        <div className='row flex'>
+          <LakeStarePic cn='activity-pic'/>        
+          <CampfireCirclePic cn='activity-pic'/>
+          <LakeStarePic cn='activity-pic'/>   
+        </div>
+          
+        <div className='row flex'>
+          <CampfireCirclePic cn='activity-pic'/>
+          <LakeStarePic cn='activity-pic'/>        
+          <CampfireCirclePic cn='activity-pic'/>
+        </div>
+
+        <div className='row flex'>
+          <LakeStarePic cn='activity-pic'/>        
+          <CampfireCirclePic cn='activity-pic'/>
+          <LakeStarePic cn='activity-pic'/>  
+        </div>      
+
+        <div className='row flex'>
+          <CampfireCirclePic cn='activity-pic'/>
+          <LakeStarePic cn='activity-pic'/>        
+          <CampfireCirclePic cn='activity-pic'/>
+        </div>
+
       </Layout>
     );
   }

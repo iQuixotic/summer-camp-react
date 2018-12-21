@@ -32,8 +32,6 @@
 }
 
 .main-page-info {
-    /* width: 100%; */
-    /* margin-left: 10%; */
     text-align: justify;
 }
 
@@ -58,9 +56,6 @@
     color: white;
     font-size: 2.5rem;
 }
-/* .btn-group {
-
-} */
 
 .half-width {
     width: 50%;
@@ -84,6 +79,8 @@
     width: 50%;
     color: purple;
 }
+
+
 
 @media only screen and (max-width: 900px) {
 

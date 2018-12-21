@@ -14,7 +14,22 @@
 .my-carousel-item {
     position: unset;
 }
+/* 
+.zoomer {    
+    animation: moveUp 5s ease-out;
+}
 
+@keyframes moveUp {
+    0% {
+        transform: translateY(3rem);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(0);
+        opacity: 1;
+    }
+} */
 
 /* .carousel-slider {
     width: 100%;
