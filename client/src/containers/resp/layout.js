@@ -42,9 +42,7 @@ class Layout extends Component {
                 <div onClick={this.sideDrawerToggle}><Sidedrawer/><Backdrop/></div>                            
                 }
               </MQ>
-              <div className='under-nav'>
                 {this.props.children}
-              </div>
               <div className='above-footer' />              
             </div>          
     );

@@ -70,6 +70,7 @@ class Main extends React.Component {
         load={this.imageLoadedHandler}
         />
         
+        <div className='under-nav'>        
         <div className='page-edge main-pg margin-top'>
           <div className='container'>
             {mySignInForm}  
@@ -108,6 +109,7 @@ class Main extends React.Component {
               That box? i can fit in that box spot something, big eyes, big eyes, crouch, shake butt, prepare to pounce it's 3am, time to create some chaos spread kitty litter all over house scratch the box poop in a handbag look delicious and drink the soapy mopping up water then puke giant foamy fur-balls. Cats making all the muffins meow to be let out, sniff other cat's butt and hang jaw half open thereafter yet meow in empty rooms groom yourself 4 hours - checked, have your beauty sleep 18 hours - checked, be fabulous for the rest of the day - checked. Pee in the shoe pet me pet me don't pet me curl into a furry donut for annoy kitten brother with poking and relentlessly pursues moth but stare at ceiling light, or small kitty warm kitty little balls of fur. Spot something, big eyes, big eyes, crouch, shake butt, prepare to pounce grab pompom in mouth and put in water dish, lick butt lick human with sandpaper tongue i love cuddles stare at imaginary bug. Present belly, scratch hand when stroked plays league of legends, so pet right here, no not there, here, no fool, right here that other cat smells funny you should really give me all the treats because i smell the best and omg you finally got the right spot and i love you right now. Always hungry stare at ceiling, so ooooh feather moving feather! chase the pig around the house but soft kitty warm kitty little ball of furr scratch the box. The door is opening! how exciting oh, it's you, meh attack like a vicious monster but purr kitty scratches couch bad kitty and murf pratt ungow ungow, but ears back wide eyed.</p>
             </div>
           </div>
+        </div>
         </div>
     </Layout>
     );
