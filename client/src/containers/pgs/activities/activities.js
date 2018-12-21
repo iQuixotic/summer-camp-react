@@ -16,7 +16,9 @@ class ActivitiesPage extends React.Component {
   render() {
     return (
       <Layout>
-        
+        {/* <div className='row'> */}
+          <p className='paragraph' >Here are some of our activities !!</p>
+        {/* </div>         */}
         <div className='row flex'>
           <LakeStarePic cn='activity-pic'/>        
           <CampfireCirclePic cn='activity-pic'/>
