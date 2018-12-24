@@ -11,6 +11,11 @@ class CalendarPage extends React.Component {
     return (
       <Layout>
           <h1>{this.state.headline}</h1>
+          <form>
+            <div className='input-field'>
+              <input type='text' className='datepicker' />
+            </div>
+          </form>
       </Layout>
     );
   }
