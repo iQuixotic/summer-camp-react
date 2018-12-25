@@ -68,13 +68,15 @@
     </script>
 
     <script>
-      $('.datepicker').pickadate({
-        selectMonths: true,
-        selectYears: 5
-      });
+    $(document).ready(function(){
+
+       $(document).ready(function(){
+    $('.datepicker').datepicker();
+  });
       // const Calendar = document.querySelector('.datepicker');
       // M.Datepicker.init(Calendar, {});
       // console.log(Calendar)
+    });  
     </script>
   </body>
 </html>
